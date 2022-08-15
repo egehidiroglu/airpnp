@@ -1,5 +1,74 @@
 // Specific CSS for your home-page
 
+#landing-page-banner {
+  background-image: url('/assets/home-banner-toilet-paper-background.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 200px 0;
+  height: 520px;
+}
+
+#banner-container {
+  width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+#title {
+  color: white;
+}
+
+#description {
+  color: white;
+  opacity: .7;
+  font-size: 20px;
+}
+
+#banner-btn {
+  padding: 10px;
+  font-size: 14px;
+  color: white;
+  background-color: #d3889b;
+  /* border: 1px solid #f0aa30; */
+  border-radius: 10px;
+  padding: 10px 10px;
+  margin: 0 auto;
+  text-decoration: none;
+}
+
+#banner-btn:hover {
+  font-size: 18px;
+  transition: 1s;
+}
+
+#landing-page-cards {
+  display: flex;
+  justify-content: space-between;
+  margin: auto auto 30px;
+  width: 900px;
+  align-content: center;
+}
+
+.landing-page-card {
+  border: 1px solid lightgrey;
+  border-radius: 2px;
+  padding: 20px;
+  width: 300px;
+  margin-left: 20px;
+  box-shadow: 1px 2px #b1afaf;
+}
+
+#landing-cards-container {
+  margin-top: 10px;
+  text-align: center;
+  align-items: center;
+}
+
+.landing-icons {
+  width: 125px;
+  height: 125px;
+}
+
 .footer-basic {
   padding:40px 0;
   background-color:#ffffff;

@@ -1,6 +1,34 @@
+<%# Banner %>
+<div id="landing-page-banner">
+  <div id="banner-container">
+    <h1 id="title">Airpnp makes bathroom breaks easier</h1>
+    <p id="description">Find the perfect bathroom, and take that break you were waiting for!</p>
+    <a href="" id="banner-btn">Relieve Yourself</a>
+    <%# <%= link_to 'Relieve Yourself', bathrooms_path, id: 'banner-btn' %>
+  </div>
+</div>
 
-
-<html>
+<%# How it works %>
+<div id="landing-cards-container">
+  <h2>How It Works?</h2>
+  <div id="landing-page-cards">
+    <div class="landing-page-card">
+      <%= image_tag "toilet-icon.png", class: 'landing-icons' %>
+      <h3>Browse Bathrooms</h3>
+      <p>Select from a huge selection of bathrooms</p>
+    </div>
+    <div class="landing-page-card">
+      <%= image_tag "person-icon.png", class: 'landing-icons' %>
+      <h3>Make a Request</h3>
+      <p>Connect with amazing hosts</p>
+    </div>
+    <div class="landing-page-card">
+      <%= image_tag "poop-icon.png", class: 'landing-icons' %>
+      <h3>Take a shit!</h3>
+      <p>It's easy as that</p>
+    </div>
+  </div>
+</div>
 
 <head>
     <meta charset="utf-8">
@@ -32,5 +60,3 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 </body>
-
-</html>
