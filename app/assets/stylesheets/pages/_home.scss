@@ -52,12 +52,15 @@
   border: 1px solid lightgrey;
   border-radius: 2px;
   padding: 20px;
-  // box-shadow: 0 0 5px rgb(230 230 230);
+  width: 300px;
+  margin-left: 20px;
+  box-shadow: 1px 2px #b1afaf;
 }
 
 #landing-cards-container {
+  margin-top: 10px;
   text-align: center;
-  margin: auto;
+  align-items: center;
 }
 
 .landing-icons {
