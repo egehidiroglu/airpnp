@@ -5,6 +5,7 @@
   </div>
   <div class="cards">
     <% @bathrooms.each do |bathroom| %>
+      <%= link_to bathroom_path(bathroom) do %>
       <div class="card-trip" >
         <img src="https://dwgyu36up6iuz.cloudfront.net/heru80fdn/image/upload/c_fill,d_placeholder_wired.png,fl_progressive,g_face,h_1080,q_80,w_1920/v1637246862/wired_wired-news-and-science-the-21st-century-toilet.jpg" />
         <div class="card-trip-infos">
@@ -14,8 +15,12 @@
         </div>
           <h2 class="card-trip-pricing"><%= bathroom.price %> $/min</h2>
           <img src="https://static.vecteezy.com/system/resources/thumbnails/002/383/145/small/cartoon-illustration-of-toilet-paper-free-vector.jpg" class="card-trip-user avatar-bordered"/>
+
         </div>
       </div>
+
+      <% end %>
+
     <% end %>
   </div>
 </div>
