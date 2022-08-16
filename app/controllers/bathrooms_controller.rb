@@ -22,6 +22,10 @@ class BathroomsController < ApplicationController
     end
   end
 
+  def my_bathrooms
+    @bathrooms = Bathroom.where(user: current_user)
+  end
+
   private
 
   def bathroom_params
