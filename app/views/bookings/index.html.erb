@@ -1,0 +1,8 @@
+<h1>Your Bookings</h1>
+
+<% @bookings.each do |booking| %>
+  <div class="card">
+    <p class="card-text">Host: <%= booking.bathroom.host.email %></p>
+    <p class="card-text"><%= booking.start_date_time %> to <%= booking.end_date_time %></p>
+  </div>
+<% end %>
