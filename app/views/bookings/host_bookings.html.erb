@@ -1,0 +1,34 @@
+<h1>Your Bookings</h1>
+
+<h2>Pending</h2>
+<% @bookings.each do |booking| %>
+  <% if booking.status == "pending" %>
+    <div class="card">
+      <p class="card-text">User: <%= booking.user %></p>
+      <p class="card-text"><%= booking.start_date_time %> to <%= booking.end_date_time %></p>
+      <%= link_to 'See Details', host_booking_path(booking) %>
+  </div>
+  <% end %>
+<% end %>
+
+<h2>Accepted</h2>
+<% @bookings.each do |booking| %>
+  <% if booking.status == "accepted" %>
+    <div class="card">
+      <p class="card-text">User: <%= booking.user %></p>
+      <p class="card-text"><%= booking.start_date_time %> to <%= booking.end_date_time %></p>
+      <%= link_to 'See Details', host_booking_path(booking) %>
+  </div>
+  <% end %>
+<% end %>
+
+<h2>Rejected</h2>
+<% @bookings.each do |booking| %>
+  <% if booking.status == "rejected" %>
+    <div class="card">
+      <p class="card-text">User: <%= booking.user %></p>
+      <p class="card-text"><%= booking.start_date_time %> to <%= booking.end_date_time %></p>
+      <%= link_to 'See Details', host_booking_path(booking) %>
+  </div>
+  <% end %>
+<% end %>
