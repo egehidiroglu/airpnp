@@ -33,7 +33,16 @@ class BookingsController < ApplicationController
   def update
     @booking = Booking.find(params[:id])
     @booking.status = params[:booking][:status]
-    raise
+    @booking.save
+    redirect_to
+  end
+
+  def host_bookings
+    @bookings = Booking.where(user: current_user)
+  end
+
+  def host_bookings_show
+    @booking = Booking.find(params[:id])
   end
 
   private

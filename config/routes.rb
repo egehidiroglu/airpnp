@@ -11,4 +11,8 @@ Rails.application.routes.draw do
   get '/host_bookings/:id/set_status', to: 'bookings#set_status', as: :status_form
 
   patch '/host_bookings/:id', to: 'bookings#update', as: :set_status
+
+  get '/host_bookings', to: 'bookings#host_bookings', as: :host_bookings
+
+  get '/host_bookings/:id', to: 'bookings#host_bookings_show', as: :host_booking
 end
