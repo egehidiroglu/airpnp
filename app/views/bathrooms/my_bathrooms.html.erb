@@ -1,0 +1,9 @@
+<h1>My Bathrooms</h1>
+
+<% @bathrooms.each do |bathroom| %>
+  <div class="card">
+    <p class="card-title"><%= bathroom.location %></p>
+    <p class="card-text"><%= bathroom.price %></p>
+    <p class="card-text"><%= bathroom.description %></p>
+  </div>
+<% end %>

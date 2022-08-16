@@ -1,8 +1,8 @@
 
 <div class="container">
   <h1> <%= @bathroom.description %> </h1>
-  <div class="w-100">
-    <img src="https://picsum.photos/200/300" alt="Toilet picture">
+  <div class="w-300">
+    <%= cl_image_tag @bathroom.photo.key, height: 300, width: 500, crop: :fill %>
   </div>
 
   <div class="card">
@@ -13,5 +13,10 @@
     <p> <b> Email </b><%= @user.email %> </p>
   </div>
 
+<<<<<<< HEAD
   <button class="btn btn-primary">Book this bathroom!</button>
+=======
+  <%= link_to 'Book this bathroom!', new_bathroom_booking_path(@bathroom) %>
+  <%= link_to 'Back to bathrooms', bathrooms_path %>
+>>>>>>> master
 </div>

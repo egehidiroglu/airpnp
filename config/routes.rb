@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   resources :bookings, only: %i[index show]
 
+  get '/my_bathrooms', to: 'bathrooms#my_bathrooms', as: :my_bathrooms
+
   get '/host_bookings/:id/set_status', to: 'bookings#set_status', as: :status_form
 
   patch '/host_bookings/:id', to: 'bookings#update', as: :set_status
