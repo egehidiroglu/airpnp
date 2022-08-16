@@ -1,7 +1,7 @@
 class Bathroom < ApplicationRecord
   belongs_to :user
   has_many :bookings
-  validates :price, numericality: true, presence: true
+  validates :price, presence: true
   validates :location, presence: true
 
   enum availability: {
