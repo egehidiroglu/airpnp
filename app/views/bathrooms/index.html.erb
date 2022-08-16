@@ -1,27 +1,22 @@
 <div class="container">
-
   <div class="row">
     <h1 class="d-flex justify-content-center my-4">All the bathrooms</h1>
   </div>
   <div class="cards">
     <% @bathrooms.each do |bathroom| %>
       <%= link_to bathroom_path(bathroom) do %>
-      <div class="card-trip" >
-        <%= cl_image_tag bathroom.photo.key, crop: :fill %>
+        <div class="card-trip" >
+          <%= cl_image_tag bathroom.photo.key, crop: :fill %>
         <div class="card-trip-infos">
-        <div>
-          <h2><%= link_to bathroom.location, bathroom_path(bathroom) %></h2>
-          <p><%= bathroom.description %></p>
+          <div>
+            <h2><%= link_to bathroom.location, bathroom_path(bathroom) %></h2>
+            <p><%= bathroom.description %></p>
+          </div>
+            <h2 class="card-trip-pricing"><%= bathroom.price %> $/min</h2>
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/002/383/145/small/cartoon-illustration-of-toilet-paper-free-vector.jpg" class="card-trip-user avatar-bordered"/>
+          </div>
         </div>
-          <h2 class="card-trip-pricing"><%= bathroom.price %> $/min</h2>
-          <img src="https://static.vecteezy.com/system/resources/thumbnails/002/383/145/small/cartoon-illustration-of-toilet-paper-free-vector.jpg" class="card-trip-user avatar-bordered"/>
-
-        </div>
-
-      </div>
-
       <% end %>
-
     <% end %>
   </div>
 </div>
