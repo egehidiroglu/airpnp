@@ -23,6 +23,6 @@ class BathroomsController < ApplicationController
   private
 
   def bathroom_params
-    params.require(:bathroom).permit(:price, :location, :description)
+    params.require(:bathroom).permit(:price, :location, :description, :photo)
   end
 end
