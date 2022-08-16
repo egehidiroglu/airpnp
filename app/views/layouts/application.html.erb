@@ -21,9 +21,10 @@
   <body>
   <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
+    <%= link_to "/bathrooms", class: "navbar-brand" do %>
       <%= image_tag "https://static.thenounproject.com/png/352851-200.png" %>
     <% end %>
+    <h1  class="text-light">Airpnp</h1>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -31,26 +32,21 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
-        <%# if user_signed_in? %>
-          <li class="nav-item active">
-            <%= link_to "My bathrooms", "#", class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "My bookings", "#", class: "nav-link" %>
-          </li>
+        <% if user_signed_in? %>
           <li class="nav-item dropdown">
             <%= image_tag "https://static.vecteezy.com/system/resources/thumbnails/002/383/145/small/cartoon-illustration-of-toilet-paper-free-vector.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Action", "#", class: "dropdown-item" %>
+              <%= link_to "My bathrooms", "#", class: "dropdown-item" %>
+              <%= link_to "My bookings", "#", class: "dropdown-item" %>
               <%= link_to "Another action", "#", class: "dropdown-item" %>
               <%= link_to "Log out", "#", class: "dropdown-item", data: {turbo_method: :delete} %>
             </div>
           </li>
-        <%# else %>
+        <% else %>
           <!--li class="nav-item"-->
-            <%#= link_to "Login", new_user_session_path, class: "nav-link" %>
+            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
           <!--/li-->
-        <%# end %>
+        <% end %>
       </ul>
     </div>
   </div>
