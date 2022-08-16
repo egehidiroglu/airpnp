@@ -24,7 +24,6 @@
   margin: 0;
 }
 
-
 .card-trip .card-trip-infos {
   padding: 16px;
   display: flex;
@@ -33,11 +32,23 @@
   position: relative;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+  transition: width 2s;
+}
+
+a:hover {
+  text-decoration: none;
+  color: rgb(179, 127, 144);
+}
+
 .card-trip-infos .card-trip-user {
   position: absolute;
   right: 16px;
   top: -20px;
   width: 40px;
+  text-decoration: none;
 }
 
 .cards {
