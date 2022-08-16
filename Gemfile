@@ -24,6 +24,9 @@ gem "turbo-rails"
 # Devise gem
 gem "devise"
 
+# Faker gem
+gem 'faker'
+
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
 
