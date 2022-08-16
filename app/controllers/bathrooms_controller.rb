@@ -4,6 +4,8 @@ class BathroomsController < ApplicationController
   end
 
   def show
+    @bathroom = Bathroom.find(params[:id])
+    @user = @bathroom.user
   end
 
   def new

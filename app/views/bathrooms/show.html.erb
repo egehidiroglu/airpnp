@@ -1,1 +1,17 @@
-<h1>This is showing you a very nice bathroom</h1>
+
+<div class="container">
+  <h1> <%= @bathroom.description %> </h1>
+  <div class="w-100">
+    <img src="https://picsum.photos/200/300" alt="Toilet picture">
+  </div>
+
+  <div class="card">
+    <p> <b> Location: </b><%= @bathroom.location %> </p>
+    <p> <b> Price: </b><%= @bathroom.price %> </p>
+    <p> <b> Name </b><%= "#{@user.first_name} #{@user.last_name}" %> </p>
+    <p> <b> Phone number </b><%= @user.phone_number %> </p>
+    <p> <b> Email </b><%= @user.email %> </p>
+  </div>
+
+  <button>Book this bathroom!</button>
+</div>
