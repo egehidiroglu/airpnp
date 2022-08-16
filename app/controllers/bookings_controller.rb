@@ -34,7 +34,7 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     @booking.status = params[:booking][:status]
     @booking.save
-    redirect_to
+    redirect_to booking_path(@booking)
   end
 
   def host_bookings
