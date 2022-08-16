@@ -1,11 +1,12 @@
 <div class="container">
 
   <div class="row">
-    <h1 class="d-flex justify-content-center">All the bathrooms</h1>
+    <h1 class="d-flex justify-content-center my-4">All the bathrooms</h1>
   </div>
+  <div class="cards">
     <% @bathrooms.each do |bathroom| %>
       <div class="card-trip" >
-        <img src="https://images.pexels.com/photos/3700253/pexels-photo-3700253.jpeg" />
+        <img src="https://dwgyu36up6iuz.cloudfront.net/heru80fdn/image/upload/c_fill,d_placeholder_wired.png,fl_progressive,g_face,h_1080,q_80,w_1920/v1637246862/wired_wired-news-and-science-the-21st-century-toilet.jpg" />
         <div class="card-trip-infos">
         <div>
           <h2><%= bathroom.location %></h2>
@@ -16,4 +17,5 @@
         </div>
       </div>
     <% end %>
+  </div>
 </div>
