@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :bathrooms, only: %i[index show new create] do
     resources :bookings, only: %i[new create]
   end
+  resources :bathrooms, only: [:destroy]
 
   resources :bookings, only: %i[index show]
 

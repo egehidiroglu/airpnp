@@ -22,6 +22,13 @@ class BathroomsController < ApplicationController
     end
   end
 
+  # This should probably redirect to My_Bathrooms
+  def destroy
+    @bathroom = Bathroom.find(params[:id])
+    @bathroom.destroy
+    redirect_to bathrooms_path, status: :see_other
+  end
+
   private
 
   def bathroom_params
