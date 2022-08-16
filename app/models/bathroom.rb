@@ -4,8 +4,12 @@ class Bathroom < ApplicationRecord
   validates :price, numericality: true, presence: true
   validates :location, presence: true
 
-  enum status: {
+  enum availability: {
     unavailable: 0,
     available: 1
   }
+
+  def host
+    user
+  end
 end
