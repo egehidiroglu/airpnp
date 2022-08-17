@@ -38,7 +38,7 @@ class BookingsController < ApplicationController
   end
 
   def host_bookings
-    @bookings = Booking.where(user: current_user)
+    @bookings = Booking.all
   end
 
   def host_bookings_show
