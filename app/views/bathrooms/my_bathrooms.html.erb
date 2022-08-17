@@ -5,5 +5,12 @@
     <p class="card-title"><%= bathroom.location %></p>
     <p class="card-text"><%= bathroom.price %></p>
     <p class="card-text"><%= bathroom.description %></p>
+    <p> <%= link_to "Edit", edit_bathroom_path(bathroom) %> </p>
+    <p>
+      <%= link_to "Delete this bathroom",
+      bathroom_path(bathroom),
+      data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+      %>
+    </p>
   </div>
 <% end %>
