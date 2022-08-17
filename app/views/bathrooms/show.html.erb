@@ -15,10 +15,17 @@
     <p> <b> Email </b><%= @user.email %> </p>
   </div>
 
-  <%= link_to "Delete this bathroom",
-    bathroom_path(@bathroom),
-    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-  %>
+<%# This should only show if user owns the bathroom %>
+  <% if current_user == @bathroom.user %>
+    <p>
+      <%= link_to "Delete this bathroom",
+      bathroom_path(@bathroom),
+      data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+      %>
+      <% end  %>
+    </p>
+
+
 
   <%= link_to 'Book this bathroom!', new_bathroom_booking_path(@bathroom) %>
   <%= link_to 'Back to bathrooms', bathrooms_path %>

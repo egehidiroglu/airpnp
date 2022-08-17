@@ -1,5 +1,5 @@
 <h1>My Bathrooms</h1>
-
+<%= link_to 'Create a new bathroom', new_bathroom_path %>
 <% @bathrooms.each do |bathroom| %>
   <div class="card">
     <p class="card-title"><%= bathroom.location %></p>
