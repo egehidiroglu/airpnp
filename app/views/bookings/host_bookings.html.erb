@@ -2,7 +2,6 @@
 
 <h2>Pending</h2>
 <% @bookings.each do |booking| %>
-      <p><%= current_user.email %></p>
   <% if booking.status == "pending" && booking.bathroom.host == current_user %>
     <div class="card">
       <p class="card-text">User: <%= booking.user.email %></p>
