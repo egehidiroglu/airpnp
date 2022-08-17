@@ -36,7 +36,7 @@ class BookingsController < ApplicationController
     @booking.save
     redirect_to booking_path(@booking)
   end
-
+  # host bookings
   def host_bookings
     @bookings = Booking.all
   end
