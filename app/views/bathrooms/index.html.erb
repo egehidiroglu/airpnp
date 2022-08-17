@@ -6,7 +6,9 @@
     <% @bathrooms.each do |bathroom| %>
       <%= link_to bathroom_path(bathroom) do %>
         <div class="card-trip" >
+        <% if bathroom.photo.attached? %>
           <%= cl_image_tag bathroom.photo.key, crop: :fill %>
+          <% end %>
           <div class="card-trip-infos">
             <div>
               <h2><%= bathroom.location %></h2>
