@@ -22,7 +22,16 @@ class BathroomsController < ApplicationController
     end
   end
 
-  # This should probably redirect to My_Bathrooms
+  def edit
+    @bathroom = Bathroom.find(params[:id])
+  end
+
+  def update
+    @toilet = Bathroom.find(params[:id])
+    @toilet.update(bathroom_params)
+    redirect_to bathroom_path(@toilet)
+  end
+
   def destroy
     @bathroom = Bathroom.find(params[:id])
     @bathroom.destroy
@@ -32,6 +41,7 @@ class BathroomsController < ApplicationController
   def my_bathrooms
     @bathrooms = Bathroom.where(user: current_user)
   end
+
 
   private
 
