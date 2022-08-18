@@ -1,33 +1,33 @@
+<div style="width: 100%; height: 600px;"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>
 <div class="container">
-  <div class="row">
-    <h1 class="d-flex justify-content-center my-4">All the bathrooms</h1>
-  </div>
-  <div style="width: 100%; height: 600px;"
-    data-controller="map"
-    data-map-markers-value="<%= @markers.to_json %>"
-    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-  </div>
-  <div class="cards">
-    <% @bathrooms.each do |bathroom| %>
-      <%= link_to bathroom_path(bathroom) do %>
-        <div class="card-trip" >
-        <% if bathroom.photo.attached? %>
-          <%= cl_image_tag bathroom.photo.key, crop: :fill %>
-          <% end %>
-          <div class="card-trip-infos">
-            <div>
-              <h2><%= bathroom.address %></h2>
-              <p><%= bathroom.description %></p>
-            </div>
-            <h2 class="card-trip-pricing"><%= bathroom.price %> $/min</h2>
-            <% if bathroom.user.photo.attached? %>
-              <%= cl_image_tag bathroom.user.photo.key, class: "card-trip-user avatar-bordered" %>
-            <% else %>
-              <img src="https://static.vecteezy.com/system/resources/thumbnails/002/383/145/small/cartoon-illustration-of-toilet-paper-free-vector.jpg" class="card-trip-user avatar-bordered"/>
+    <div class="row">
+      <h1 class="d-flex justify-content-center my-4">All the bathrooms</h1>
+    </div>
+    <div class="cards">
+      <% @bathrooms.each do |bathroom| %>
+        <%= link_to bathroom_path(bathroom) do %>
+          <div class="card-trip" >
+          <% if bathroom.photo.attached? %>
+            <%= cl_image_tag bathroom.photo.key, crop: :fill %>
             <% end %>
+            <div class="card-trip-infos">
+              <div>
+                <h2><%= bathroom.address %></h2>
+                <p><%= bathroom.description %></p>
+              </div>
+              <h2 class="card-trip-pricing"><%= bathroom.price %> $/min</h2>
+              <% if bathroom.user.photo.attached? %>
+                <%= cl_image_tag bathroom.user.photo.key, class: "card-trip-user avatar-bordered" %>
+              <% else %>
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/002/383/145/small/cartoon-illustration-of-toilet-paper-free-vector.jpg" class="card-trip-user avatar-bordered"/>
+              <% end %>
+            </div>
           </div>
-        </div>
-      <% end %>
+        <% end %>
     <% end %>
   </div>
 </div>

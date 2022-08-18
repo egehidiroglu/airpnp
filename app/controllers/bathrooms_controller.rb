@@ -4,7 +4,9 @@ class BathroomsController < ApplicationController
     @markers = @bathrooms.geocoded.map do |bathroom|
       {
         lat: bathroom.latitude,
-        lng: bathroom.longitude
+        lng: bathroom.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { bathroom: }),
+        image_url: helpers.asset_url("poop-icon.png")
       }
     end
   end
