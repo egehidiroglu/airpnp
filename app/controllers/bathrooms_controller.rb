@@ -1,6 +1,12 @@
 class BathroomsController < ApplicationController
   def index
-    @bathrooms = Bathroom.all
+    if params[:query].present?
+      # Need to change location to description after Ege push
+      sql_query = "description ILIKE :query OR location ILIKE :query"
+      @bathrooms = Bathroom.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @bathrooms = Bathroom.all
+    end
     @markers = @bathrooms.geocoded.map do |bathroom|
       {
         lat: bathroom.latitude,
@@ -8,7 +14,6 @@ class BathroomsController < ApplicationController
         info_window: render_to_string(partial: "info_window", locals: { bathroom: }),
         image_url: helpers.asset_url("poop-icon.png")
       }
-    end
   end
 
   def show
