@@ -122,7 +122,7 @@ descriptions = ["Enjoy an amazing experince in my bathroom with me and M.G.Kelly
 "I will build a wall around this bathroom!",
 "If you can't love yourself, how the hell you're gonna take a poop"]
 
-last_names = %[Fox
+last_names = %w[Fox
   Elizabeth
   Einstein
   Hussain
@@ -147,30 +147,30 @@ last_names = %[Fox
   Trump
   Paul]
 
-address = ["5589 Rue Clark Montreal",
-  "304 Rue de Bellechasse Montreal",
-  "5286 St Andre St Montreal",
-  "1108 Rue Gilford Montreal",
-  "800 Duluth Ave E Montreal",
-  "93 Maguire St Montreal",
-  "5371 Rue Clark Montreal",
-  "5417 Rue Saint-Urbain Montreal",
-  "92 Maguire St Montreal",
-  "77 St Viateur St. E Montreal",
-  "5730 St Dominique St Montreal",
-  "5849 Rue Clark Montreal",
-  "5710 Waverly St Montreal",
-  "5104 St Dominique St Montreal",
-  "121 Av. Clermont Montreal",
-  "5189 Esplanade Ave Montreal",
-  '5279 Waverly St Montreal',
-  "5615 Jeanne Mance St Montreal",
-  "5576 St Laurent Blvd Montreal",
-  "5239 St Dominique St Montreal",
-  "325 Rue Boucher Montreal",
-  "5297 Henri Julien Ave Montreal",
-  "237 Maguire St Montreal",
-  "5257 Casgrain Ave Montreal"
+address = ["5589 Rue Clark, Montreal",
+  "304 Rue de Bellechasse, Montreal",
+  "5286 St Andre St, Montreal",
+  "1108 Rue Gilford, Montreal",
+  "800 Duluth Ave E, Montreal",
+  "93 Maguire St, Montreal",
+  "5371 Rue Clark, Montreal",
+  "5417 Rue Saint-Urbain, Montreal",
+  "92 Maguire St, Montreal",
+  "77 St Viateur St. E, Montreal",
+  "5730 St Dominique St, Montreal",
+  "5849 Rue Clark, Montreal",
+  "5710 Waverly St, Montreal",
+  "5104 St Dominique St, Montreal",
+  "121 Av. Clermont, Montreal",
+  "5189 Esplanade Ave, Montreal",
+  '5279 Waverly St, Montreal',
+  "5615 Jeanne Mance St, Montreal",
+  "5576 St Laurent Blvd, Montreal",
+  "5239 St Dominique St, Montreal",
+  "325 Rue Boucher, Montreal",
+  "5297 Henri Julien Ave, Montreal",
+  "237 Maguire St, Montreal",
+  "5257 Casgrain Ave, Montreal"
 ]
 
 # Seed users
