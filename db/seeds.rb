@@ -173,10 +173,6 @@ address = ["5589 Rue Clark, Montreal",
   "5257 Casgrain Ave, Montreal"
 ]
 
-puts "Cleaning your bathrooms..."
-Bathroom.destroy_all
-puts "Building bathrooms..."
-
 # Seed users
 puts "Destroying bathrooms..."
 Bathroom.destroy_all
