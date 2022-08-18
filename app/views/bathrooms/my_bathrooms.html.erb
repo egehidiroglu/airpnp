@@ -14,3 +14,30 @@
     </p>
   </div>
 <% end %>
+
+<%# Copied code... %>
+<div class="container">
+  <div class="cards">
+    <% @bathrooms.each do |bathroom| %>
+      <%= link_to bathroom_path(bathroom) do %>
+        <div class="card-trip" >
+        <% if bathroom.photo.attached? %>
+          <%= cl_image_tag bathroom.photo.key, crop: :fill %>
+          <% end %>
+          <div class="card-trip-infos">
+            <div>
+              <h2><%= bathroom.address %></h2>
+              <p><%= bathroom.description %></p>
+            </div>
+            <h2 class="card-trip-pricing"><%= bathroom.price %> $/min</h2>
+            <% if bathroom.user.photo.attached? %>
+              <%= cl_image_tag bathroom.user.photo.key, class: "card-trip-user avatar-bordered" %>
+            <% else %>
+              <img src="https://static.vecteezy.com/system/resources/thumbnails/002/383/145/small/cartoon-illustration-of-toilet-paper-free-vector.jpg" class="card-trip-user avatar-bordered"/>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

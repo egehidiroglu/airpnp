@@ -1,4 +1,8 @@
-<%= simple_form_for @booking, url: set_status_path(@booking) do |f| %>
-  <%= f.input :status, collection: Booking.statuses.keys %>
-  <%= f.button :submit %>
-<% end %>
+<div class="container border col-lg-5 col-sm-6 mt-4">
+  <%= simple_form_for @booking, url: set_status_path(@booking) do |f| %>
+    <%= f.input :status, collection: Booking.statuses.keys %>
+    <div  class="d-flex justify-content-center mb-2">
+      <%= f.button :submit %>
+    </div>
+  <% end %>
+</div>
