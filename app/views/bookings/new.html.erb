@@ -1,7 +1,7 @@
 
-<div class="container">
+<div class="container border col-lg-4 col-sm-6 mt-4">
   <%= simple_form_for([@bathroom, @booking]) do |f|%>
-    <div class="col-xs-2">
+    <div>
       <%= f.input :start_date_time, html5: true %>
     </div>
     <%= f.input :end_date_time, html5: true %>
