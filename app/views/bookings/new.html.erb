@@ -1,5 +1,10 @@
-<%= simple_form_for([@bathroom, @booking]) do |f|%>
-  <%= f.input :start_date_time %>
-  <%= f.input :end_date_time %>
-  <%= f.button :submit %>
-<% end %>
+
+<div class="container">
+  <%= simple_form_for([@bathroom, @booking]) do |f|%>
+    <div class="col-xs-2">
+      <%= f.input :start_date_time, html5: true %>
+    </div>
+    <%= f.input :end_date_time, html5: true %>
+    <%= f.button :submit %>
+  <% end %>
+</div>
