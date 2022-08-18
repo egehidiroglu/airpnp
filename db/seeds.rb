@@ -12,6 +12,10 @@ users = %w[https://media.istockphoto.com/photos/portrait-of-mature-hispanic-man-
   https://media.istockphoto.com/photos/studio-portrait-of-a-27-year-old-man-with-a-beard-in-a-white-tshirt-picture-id1160007740]
 emails = %w[hugo@toilet.com casey@toilet.com ege@toilet.com Adou@toilet.com Kieren@toilet.com stephane@toilet.com test@gmail.com]
 
+puts "Cleaning your bathrooms..."
+Bathroom.destroy_all
+puts "Building bathrooms..."
+
 # Seed users
 puts "Destroying users..."
 User.destroy_all
