@@ -7,6 +7,13 @@ class BathroomsController < ApplicationController
     else
       @bathrooms = Bathroom.all
     end
+    @markers = @bathrooms.geocoded.map do |bathroom|
+      {
+        lat: bathroom.latitude,
+        lng: bathroom.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { bathroom: }),
+        image_url: helpers.asset_url("poop-icon.png")
+      }
   end
 
   def show
@@ -48,10 +55,9 @@ class BathroomsController < ApplicationController
     @bathrooms = Bathroom.where(user: current_user)
   end
 
-
   private
 
   def bathroom_params
-    params.require(:bathroom).permit(:price, :location, :description, :photo)
+    params.require(:bathroom).permit(:price, :address, :description, :photo, :latitude, :longitude)
   end
 end

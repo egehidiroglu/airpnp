@@ -1,7 +1,7 @@
 <h1>Create a New Bathroom</h1>
 <%= simple_form_for(@bathroom) do |f| %>
   <%= f.input :price %>
-  <%= f.input :location %>
+  <%= f.input :address %>
   <%= f.input :description %>
   <%= f.input :photo, as: :file,
               required: true %>

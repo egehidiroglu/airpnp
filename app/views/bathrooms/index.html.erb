@@ -9,7 +9,11 @@
        <%= submit_tag "Search", class: "btn btn-primary" %>
       <% end %>
   </div>
-
+  <div style="width: 100%; height: 600px;"
+    data-controller="map"
+    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
   <div class="row">
     <h1 class="d-flex justify-content-center my-4">All the bathrooms</h1>
   </div>
@@ -22,7 +26,7 @@
           <% end %>
           <div class="card-trip-infos">
             <div>
-              <h2><%= bathroom.location %></h2>
+              <h2><%= bathroom.address %></h2>
               <p><%= bathroom.description %></p>
             </div>
             <h2 class="card-trip-pricing"><%= bathroom.price %> $/min</h2>
