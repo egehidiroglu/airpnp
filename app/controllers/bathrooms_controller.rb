@@ -1,7 +1,6 @@
 class BathroomsController < ApplicationController
   def index
     @bathrooms = Bathroom.all
-
     @markers = @bathrooms.geocoded.map do |bathroom|
       {
         lat: bathroom.latitude,
