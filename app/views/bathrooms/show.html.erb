@@ -1,7 +1,7 @@
 
 <div class="container">
   <h1> <%= @bathroom.description %> </h1>
-  <div class="w-300">
+  <div class="justify-content-center">
   <% if @bathroom.photo.attached? %>
     <%= cl_image_tag @bathroom.photo.key, height: 300, width: 500, crop: :fill %>
     <% end %>
