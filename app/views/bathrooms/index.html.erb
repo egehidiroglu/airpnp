@@ -2,6 +2,11 @@
   <div class="row">
     <h1 class="d-flex justify-content-center my-4">All the bathrooms</h1>
   </div>
+  <div style="width: 100%; height: 600px;"
+    data-controller="map"
+    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
   <div class="cards">
     <% @bathrooms.each do |bathroom| %>
       <%= link_to bathroom_path(bathroom) do %>
