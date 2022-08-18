@@ -27,6 +27,9 @@ gem "devise"
 # Faker gem
 gem 'faker'
 
+# pg search
+gem "pg_search"
+
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
 
