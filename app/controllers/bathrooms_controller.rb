@@ -1,6 +1,12 @@
 class BathroomsController < ApplicationController
   def index
-    @bathrooms = Bathroom.all
+    # raise
+    if params[:query].present?
+      # raise
+      @bathrooms = Bathroom.where(description: params[:query])
+    else
+      @bathrooms = Bathroom.all
+    end
   end
 
   def show
