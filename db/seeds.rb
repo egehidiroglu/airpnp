@@ -38,7 +38,7 @@ puts "Building bathrooms..."
 counter = 1
 25.times do
   bathroom = Bathroom.new(price: rand(0..100),
-  location: Faker::Address.street_address,
+  address: Faker::Address.street_address,
   description: Faker::Lorem.sentence(word_count: rand(5..10)),
   user: User.order('RANDOM()').first)
   file = URI.open(bathrooms.sample)

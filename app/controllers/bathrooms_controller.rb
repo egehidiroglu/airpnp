@@ -1,6 +1,13 @@
 class BathroomsController < ApplicationController
   def index
     @bathrooms = Bathroom.all
+
+    @markers = @bathrooms.geocoded.map do |bathroom|
+      {
+        lat: bathroom.latitude,
+        lng: bathroom.longitude
+      }
+    end
   end
 
   def show
@@ -42,10 +49,9 @@ class BathroomsController < ApplicationController
     @bathrooms = Bathroom.where(user: current_user)
   end
 
-
   private
 
   def bathroom_params
-    params.require(:bathroom).permit(:price, :location, :description, :photo)
+    params.require(:bathroom).permit(:price, :address, :description, :photo, :latitude, :longitude)
   end
 end

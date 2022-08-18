@@ -2,7 +2,7 @@
 <%= link_to 'Create a new bathroom', new_bathroom_path %>
 <% @bathrooms.each do |bathroom| %>
   <div class="card">
-    <p class="card-title"><%= bathroom.location %></p>
+    <p class="card-title"><%= bathroom.address %></p>
     <p class="card-text"><%= bathroom.price %></p>
     <p class="card-text"><%= bathroom.description %></p>
     <p> <%= link_to "Edit", edit_bathroom_path(bathroom) %> </p>
