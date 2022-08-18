@@ -3,7 +3,7 @@ class BathroomsController < ApplicationController
     # raise
     if params[:query].present?
       # raise
-      @bathrooms = Bathroom.where(description: params[:query])
+      @bathrooms = Bathroom.where("description ILIKE ?", "%#{params[:query]}%")
     else
       @bathrooms = Bathroom.all
     end
