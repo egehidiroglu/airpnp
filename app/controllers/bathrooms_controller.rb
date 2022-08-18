@@ -1,9 +1,9 @@
 class BathroomsController < ApplicationController
   def index
-    # raise
     if params[:query].present?
-      # raise
-      @bathrooms = Bathroom.where("description ILIKE ?", "%#{params[:query]}%")
+      # Need to change location to description after Ege push
+      sql_query = "description ILIKE :query OR location ILIKE :query"
+      @bathrooms = Bathroom.where(sql_query, query: "%#{params[:query]}%")
     else
       @bathrooms = Bathroom.all
     end
