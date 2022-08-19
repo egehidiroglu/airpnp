@@ -14,7 +14,7 @@
   text-align: center;
 }
 
-#title {
+#banner-title {
   color: white;
 }
 
@@ -135,14 +135,12 @@
 }
 
 .map-card-container {
-  border: 1px solid red;
   display: flex;
 }
 
 #index-cards-container {
   display: flex;
   flex-direction: column;
-  border: 1px solid blue;
   width: 100%;
 }
 
@@ -151,7 +149,6 @@
   height: 100vh;
   position: sticky;
   top: 65px;
-  border: 1px solid green;
 }
 
 .index-cards {
