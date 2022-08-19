@@ -11,6 +11,9 @@
           data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: 'button delete-icon' do %>
           <i class="fa-solid fa-trash"></i>
         <% end %>
+        <div>
+          <%= link_to "Edit", edit_bathroom_path(bathroom), class: 'button edit-icon' %>
+        </div>
         <%= link_to bathroom_path(bathroom) do %>
           <div class="card-trip" >
           <% if bathroom.photo.attached? %>
