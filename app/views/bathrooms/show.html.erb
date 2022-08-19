@@ -24,7 +24,7 @@
     <p>
       <%= link_to "Delete this bathroom",
       bathroom_path(@bathroom),
-      data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+      data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: 'button'
       %>
     </p>
   <% end  %>
@@ -33,12 +33,15 @@
     <% if current_user == @bathroom.user %>
     <p>
       <%= link_to "Update this bathroom",
-      edit_bathroom_path(@bathroom)
+      edit_bathroom_path(@bathroom), class: 'button'
       %>
     </p>
   <% end  %>
 
 <%# If this is the users bathroom %>
-  <%= link_to 'Book this bathroom!', new_bathroom_booking_path(@bathroom) %>
-  <%= link_to 'Back to bathrooms', bathrooms_path %>
+  <%= link_to 'Book this bathroom!', new_bathroom_booking_path(@bathroom), class: 'button' %>
+  <%= link_to 'Back to bathrooms', bathrooms_path, class: 'button' %>
 </div>
+
+
+<%#= link_to 'Relieve Yourself', bathrooms_path, class: 'button' %>
