@@ -1,84 +1,18 @@
-<h1>Your Bookings</h1>
+<h1 class="d-flex justify-content-center my-4">Your Bookings</h1>
+<div class="d-flex justify-content-center my-3">
 
 <% @bookings.each do |booking| %>
   <div class="card">
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://medicaldialogues.in/h-upload/2020/10/31/141669-booked.jpg)">
+
+
+  <div class="card-product-infos">
+
+  </div>
+</div>
+
     <p class="card-text">Host: <%= booking.bathroom.host.email %></p>
     <p class="card-text"><%= booking.start_date_time %> to <%= booking.end_date_time %></p>
-    <%= link_to 'See Details', booking_path(booking) %>
-  </div>
+    <a class="btn btn-gradient"<%= link_to 'See Details', booking_path(booking) %>
+
 <% end %>
-<div id="booking" class="section">
-<div class="section-center">
-
-
-<div class="booking-cta">
-
-
-</div>
-</div>
-    <div class="col-md-4 col-md-pull-7">
-    <div class="booking-form">
-    <form>
-    <div class="form-group">
-    <span class="form-label">Your Booking</span>
-    <input class="form-control" type="text" placeholder="Enter your booking ">
-</div>
-    <div class="row">
-    <div class="col-sm-6">
-    <div class="form-group">
-    <span class="form-label">Check In</span>
-    <input class="form-control" type="date" required>
-</div>
-</div>
-    <div class="col-sm-6">
-    <div class="form-group">
-    <span class="form-label">Check out</span>
-    <input class="form-control" type="date" required>
-</div>
-</div>
-</div>
-    <div class="row">
-    <div class="col-sm-4">
-    <div class="form-group">
-    <span class="form-label">Bathrooms</span>
-    <select class="form-control">
-<option>1</option>
-<option>2</option>
-<option>3</option>
-    </select>
-    <span class="select-arrow"></span>
-</div>
-</div>
-    <div class="col-sm-4">
-    <div class="form-group">
-    <span class="form-label">Adults</span>
-    <select class="form-control">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-</select>
-    <span class="select-arrow"></span>
-    </div>
-    </div>
-    <div class="col-sm-4">
-    <div class="form-group">
-    <span class="form-label">Children</span>
-    <select class="form-control">
-    <option>0</option>
-    <option>1</option>
-    <option>2</option>
-</select>
-    <span class="select-arrow"></span>
-</div>
-</div>
-</div>
-    <div class="form-btn">
-    <button class="submit-btn">Book Now!</button>
-  </div>
-  </form>
-  </div>
-</div>
-</div>
-</div>
-</div>
-</div>
