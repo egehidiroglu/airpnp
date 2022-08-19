@@ -133,3 +133,57 @@
   color:#aaa;
   margin-bottom:0;
 }
+
+.map-card-container {
+  border: 1px solid red;
+  display: flex;
+}
+
+#index-cards-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid blue;
+  width: 100%;
+}
+
+#searchbar-map {
+  width: 50%;
+  height: 100vh;
+  position: sticky;
+  top: 65px;
+  border: 1px solid green;
+}
+
+.index-cards {
+  flex-grow: 1;
+}
+
+#index-card {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 16px;
+}
+
+.searchbar {
+  position: sticky;
+}
+
+#bathrooms {
+  padding: 10px;
+}
+
+#title {
+  position: sticky;
+  top: 65px;
+  color: black;
+  z-index: 100;
+  width: 100%;
+  height: 80.75px;
+  margin: 0;
+  background: #f4f4f4;
+  z-index: 50;
+}
+
+#title-cards-container {
+  width: 50%;
+}
