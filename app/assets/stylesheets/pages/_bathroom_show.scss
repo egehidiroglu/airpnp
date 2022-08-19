@@ -1,0 +1,37 @@
+#show-title {
+  margin-top: 5px;
+}
+
+#image-card-container {
+  display: flex;
+}
+
+#buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#show-title {
+  text-align: center;
+}
+
+#show-image {
+  height: 50%
+}
+
+#show-map {
+  width: 50%;
+}
+
+#buttons {
+  margin-top: 10px;
+}
+
+#bathroom-show-card {
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  justify-content: center;
+  padding:6px;
+}
