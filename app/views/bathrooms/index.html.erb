@@ -17,7 +17,7 @@
                     <h2><%= bathroom.address %></h2>
                     <div class=card-text><%= bathroom.description %></div>
                   </div>
-                  <h2 class="card-trip-pricing"><%= bathroom.price %> $/min</h2>
+                  <h2 class="card-trip-pricing">$<%= bathroom.price %>/min</h2>
                   <% if bathroom.user.photo.attached? %>
                     <%= cl_image_tag bathroom.user.photo.key, class: "card-trip-user avatar-bordered" %>
                   <% else %>
