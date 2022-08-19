@@ -3,5 +3,5 @@
 <p>Host: <%= @booking.bathroom.host.email %></p>
 <p>Status: <%= @booking.status %></p>
 <p>Date: <%= @booking.start_date_time %> to <%= @booking.end_date_time %></p>
-<%= link_to 'Back to Bookings', host_bookings_path %>
-<%= link_to 'Set Status', status_form_path(@booking) %>
+<%= link_to 'Back to Bookings', host_bookings_path, class: 'button' %>
+<%= link_to 'Set Status', status_form_path(@booking), class: 'button' %>

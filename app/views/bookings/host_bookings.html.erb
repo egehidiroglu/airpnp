@@ -12,7 +12,7 @@
           <div class="card">
             <p class="card-text">User: <%= booking.user.email %></p>
             <p class="card-text"><%= booking.start_date_time %> to <%= booking.end_date_time %></p>
-            <%= link_to 'See Details', host_booking_path(booking) %>
+            <%= link_to 'See Details', host_booking_path(booking), class: 'button' %>
         </div>
         <% end %>
       <% end %>
@@ -25,7 +25,7 @@
           <div class="card">
             <p class="card-text">User: <%= booking.user.email %></p>
             <p class="card-text"><%= booking.start_date_time %> to <%= booking.end_date_time %></p>
-            <%= link_to 'See Details', host_booking_path(booking) %>
+            <%= link_to 'See Details', host_booking_path(booking), class: 'button' %>
         </div>
         <% end %>
       <% end %>
@@ -37,7 +37,7 @@
           <div class="card">
             <p class="card-text">User: <%= booking.user.email %></p>
             <p class="card-text"><%= booking.start_date_time %> to <%= booking.end_date_time %></p>
-            <%= link_to 'See Details', host_booking_path(booking) %>
+            <%= link_to 'See Details', host_booking_path(booking), class: 'button' %>
         </div>
         <% end %>
       <% end %>
