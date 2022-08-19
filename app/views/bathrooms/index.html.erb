@@ -1,4 +1,5 @@
 <div class="container">
+<%# --------Search Bar----------- %>
   <div class="pt-4 pb-4">
     <%= form_with url: bathrooms_path, method: :get, class: "d-flex" do %>
       <%= text_field_tag :query,
@@ -9,6 +10,7 @@
        <%= submit_tag "Search", class: "btn btn-primary" %>
       <% end %>
   </div>
+  <%# --------Map---------------- %>
   <div style="width: 100%; height: 600px;"
     data-controller="map"
     data-map-markers-value="<%= @markers.to_json %>"
@@ -17,6 +19,7 @@
   <div class="row">
     <h1 class="d-flex justify-content-center my-4">All the bathrooms</h1>
   </div>
+  <%# --------Cards-------------- %>
   <div class="cards">
     <% @bathrooms.each do |bathroom| %>
       <%= link_to bathroom_path(bathroom) do %>
@@ -27,9 +30,9 @@
           <div class="card-trip-infos">
             <div>
               <h2><%= bathroom.address %></h2>
-              <p><%= bathroom.description %></p>
+              <p class="text"><%= bathroom.description %></p>
             </div>
-            <h2 class="card-trip-pricing"><%= bathroom.price %> $/min</h2>
+            <h2 class="card-trip-pricing">$<%= bathroom.price %>/min</h2>
             <% if bathroom.user.photo.attached? %>
               <%= cl_image_tag bathroom.user.photo.key, class: "card-trip-user avatar-bordered" %>
             <% else %>
