@@ -1,9 +1,15 @@
-<h1>Your Bookings</h1>
-
-<% @bookings.each do |booking| %>
-  <div class="card">
-    <p class="card-text">Host: <%= booking.bathroom.host.email %></p>
-    <p class="card-text"><%= booking.start_date_time %> to <%= booking.end_date_time %></p>
-    <%= link_to 'See Details', booking_path(booking), class: 'button' %>
+<div class="container">
+  <div class=" d-flex justify-content-center m-3">
+    <h1>Your Bookings</h1>
   </div>
-<% end %>
+    <div class="cards">
+      <% @bookings.each do |booking| %>
+        <div class="card">
+          <p class="card-text ml-2 mt-2">Host: <%= booking.bathroom.host.email %></p>
+          <p class="card-text ml-2 mt-2">Address: <%= booking.bathroom.address %></p>
+          <p class="card-text ml-2 mt-2"><%= booking.start_date_time %> to: <%= booking.end_date_time %></p>
+          <%= link_to 'See Details', booking_path(booking), class: 'button mb-3' %>
+        </div>
+      <% end %>
+    </div>
+</div>

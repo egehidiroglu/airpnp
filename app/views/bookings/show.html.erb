@@ -1,6 +1,14 @@
-<h1>Your Booking</h1>
-<p>User: <%= @booking.user.email %></p>
-<p>Status: <%= @booking.status %></p>
-<p>Host: <%= @booking.bathroom.host.email %></p>
-<p>Date: <%= @booking.start_date_time %> to <%= @booking.end_date_time %></p>
-<%= link_to 'Back to Bookings', bookings_path, class: 'button' %>
+<div class="container w-50">
+<div class="title-show d-flex justify-content-center my-3">
+      <h1>Your Booking</h1>
+    </div>
+  <div class="card">
+    <div class="holder align-self-center p-4">
+      <p>User: <%= @booking.user.email %></p>
+      <p>Status: <%= @booking.status %></p>
+      <p>Host: <%= @booking.bathroom.host.email %></p>
+      <p>Date: <%= @booking.start_date_time %> to: <br> <%= @booking.end_date_time %></p>
+      <%= link_to 'Back to Bookings', bookings_path, class: "button" %>
+    </div>
+  </div>
+</div>
