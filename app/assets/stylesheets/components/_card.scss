@@ -68,6 +68,18 @@ a:hover {
   padding-right: 8px;
 }
 
+.delete-icon {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 10px;
+}
+
+.my-bathrooms-card-container {
+  position: relative;
+
+}
+
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .cards {
