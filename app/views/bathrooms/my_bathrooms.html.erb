@@ -1,43 +1,39 @@
 <h1>My Bathrooms</h1>
-<%= link_to 'Create a new bathroom', new_bathroom_path %>
-<% @bathrooms.each do |bathroom| %>
-  <div class="card">
-    <p class="card-title"><%= bathroom.address %></p>
-    <p class="card-text"><%= bathroom.price %></p>
-    <p class="card-text"><%= bathroom.description %></p>
-    <p> <%= link_to "Edit", edit_bathroom_path(bathroom), class: 'button' %> </p>
-    <p>
-      <%= link_to "Delete this bathroom",
-      bathroom_path(bathroom),
-      data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: 'button'
-      %>
-    </p>
-  </div>
-<% end %>
 
-<%# Copied code... %>
+<%# -----Edit code ------ %>
+   <%# <p> <%= link_to "Edit", edit_bathroom_path(bathroom), class: 'button' %>
+
 <div class="container">
   <div class="cards">
     <% @bathrooms.each do |bathroom| %>
-      <%= link_to bathroom_path(bathroom) do %>
-        <div class="card-trip" >
-        <% if bathroom.photo.attached? %>
-          <%= cl_image_tag bathroom.photo.key, crop: :fill %>
-          <% end %>
-          <div class="card-trip-infos">
-            <div>
-              <h2><%= bathroom.address %></h2>
-              <p><%= bathroom.description %></p>
-            </div>
-            <h2 class="card-trip-pricing"><%= bathroom.price %> $/min</h2>
-            <% if bathroom.user.photo.attached? %>
-              <%= cl_image_tag bathroom.user.photo.key, class: "card-trip-user avatar-bordered" %>
-            <% else %>
-              <img src="https://static.vecteezy.com/system/resources/thumbnails/002/383/145/small/cartoon-illustration-of-toilet-paper-free-vector.jpg" class="card-trip-user avatar-bordered"/>
-            <% end %>
-          </div>
+      <div class="my-bathrooms-card-container">
+        <%= link_to bathroom_path(bathroom),
+          data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: 'button delete-icon' do %>
+          <i class="fa-solid fa-trash"></i>
+        <% end %>
+        <div>
+          <%= link_to "Edit", edit_bathroom_path(bathroom), class: 'button edit-icon' %>
         </div>
-      <% end %>
+        <%= link_to bathroom_path(bathroom) do %>
+          <div class="card-trip" >
+          <% if bathroom.photo.attached? %>
+            <%= cl_image_tag bathroom.photo.key, crop: :fill %>
+            <% end %>
+            <div class="card-trip-infos">
+              <div>
+                <h2><%= bathroom.address %></h2>
+                <p class="card-text"><%= bathroom.description %></p>
+              </div>
+              <h2 class="card-trip-pricing">$<%= bathroom.price %>/min</h2>
+              <% if bathroom.user.photo.attached? %>
+                <%= cl_image_tag bathroom.user.photo.key, class: "card-trip-user avatar-bordered" %>
+              <% else %>
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/002/383/145/small/cartoon-illustration-of-toilet-paper-free-vector.jpg" class="card-trip-user avatar-bordered"/>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
     <% end %>
   </div>
 </div>
