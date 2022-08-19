@@ -20,6 +20,12 @@ class BathroomsController < ApplicationController
   def show
     @bathroom = Bathroom.find(params[:id])
     @user = @bathroom.user
+    @marker = [{
+      lat: @bathroom.latitude,
+      lng: @bathroom.longitude,
+      info_window: render_to_string(partial: "info_window", locals: { bathroom: @bathroom }),
+      image_url: helpers.asset_url("poop-icon.png")
+    }]
   end
 
   def new
