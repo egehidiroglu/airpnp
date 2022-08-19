@@ -10,6 +10,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0;
 }
 
 #show-title {
@@ -33,5 +34,9 @@
   flex-direction: column;
   height: 50%;
   justify-content: center;
-  padding:6px;
+}
+
+#buttons a {
+  font-size: 10px;
+  margin: 0 auto;
 }
