@@ -1,15 +1,16 @@
 
 <div class="container">
-  <h1> <%= @bathroom.address %> </h1>
-  <div class="justify-content-center">
+  <div class="title-show d-flex justify-content-center mt-3">
+    <h1> <%= @bathroom.address %> </h1>
+  </div>
+  <div class="d-flex justify-content-center mb-3">
   <% if @bathroom.photo.attached? %>
     <%= cl_image_tag @bathroom.photo.key, height: 300, width: 500, crop: :fill %>
     <% end %>
   </div>
 
-  <div class="card">
+  <div class="card-infos">
 
-    <p> <b> Location: </b><%= @bathroom.address %> </p>
 
     <p> <b> Description: </b><%= @bathroom.description %> </p>
 
