@@ -58,6 +58,34 @@ a:hover {
   grid-gap: 32px;
 }
 
+.card-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+          line-clamp: 1;
+  -webkit-box-orient: vertical;
+  padding-right: 8px;
+}
+
+.delete-icon {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 10px;
+}
+.edit-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 10px;
+}
+
+.my-bathrooms-card-container {
+  position: relative;
+
+}
+
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .cards {
