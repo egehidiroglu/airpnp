@@ -16,6 +16,24 @@
         <p> <b> Host </b><%= "#{@user.first_name} #{@user.last_name}" %> </p>
         <p> <b> Phone number </b><%= @user.phone_number %> </p>
         <p> <b> Email </b><%= @user.email %> </p>
+        <div id="buttons">
+          <%# ---------Delete the bathroom %>
+          <% if current_user == @bathroom.user %>
+              <%= link_to "Delete this bathroom",
+              bathroom_path(@bathroom),
+              data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: 'button'
+              %>
+          <% end  %>
+          <%# ---------Update the bathroom listing %>
+            <% if current_user == @bathroom.user %>
+              <%= link_to "Update this bathroom",
+              edit_bathroom_path(@bathroom), class: 'button'
+              %>
+          <% end  %>
+          <%# If this is the users bathroom %>
+          <%= link_to 'Book this bathroom!', new_bathroom_booking_path(@bathroom), class: 'button' %>
+          <%= link_to 'Back to bathrooms', bathrooms_path, class: 'button' %>
+        </div>
       </div>
     </div>
       <div id="show-map" style="width: 100%; height: 600px;"
@@ -24,25 +42,3 @@
         data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
   </div>
-  <div id="buttons">
-    <%# ---------Delete the bathroom %>
-    <% if current_user == @bathroom.user %>
-        <%= link_to "Delete this bathroom",
-        bathroom_path(@bathroom),
-        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: 'button'
-        %>
-    <% end  %>
-    <%# ---------Update the bathroom listing %>
-      <% if current_user == @bathroom.user %>
-        <%= link_to "Update this bathroom",
-        edit_bathroom_path(@bathroom), class: 'button'
-        %>
-    <% end  %>
-    <%# If this is the users bathroom %>
-    <%= link_to 'Book this bathroom!', new_bathroom_booking_path(@bathroom), class: 'button' %>
-    <%= link_to 'Back to bathrooms', bathrooms_path, class: 'button' %>
-  </div>
-</div>
-
-
-<%#= link_to 'Relieve Yourself', bathrooms_path, class: 'button' %>
