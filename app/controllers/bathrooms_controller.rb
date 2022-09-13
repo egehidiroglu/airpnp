@@ -12,7 +12,7 @@ class BathroomsController < ApplicationController
         lat: bathroom.latitude,
         lng: bathroom.longitude,
         info_window: render_to_string(partial: "info_window", locals: { bathroom: }),
-        image_url: helpers.asset_url("poop-icon.png")
+        image_url: helpers.asset_url("pin.png")
       }
     end
   end
@@ -24,7 +24,7 @@ class BathroomsController < ApplicationController
       lat: @bathroom.latitude,
       lng: @bathroom.longitude,
       info_window: render_to_string(partial: "info_window", locals: { bathroom: @bathroom }),
-      image_url: helpers.asset_url("poop-icon.png")
+      image_url: helpers.asset_url("pin.png")
     }]
   end
 

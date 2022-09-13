@@ -16,15 +16,13 @@
 
 // Comment
 #banner-title {
-  color: white;
-  text-shadow: 2px 1px #000000;
+  color: black;
 }
 
 #description {
-  color: white;
+  color: black;
   opacity: .8;
   font-size: 20px;
-  text-shadow: 2px 1px #000000;
 }
 
 #banner-btn {
@@ -32,7 +30,6 @@
   font-size: 14px;
   color: white;
   background-color: #d3889b;
-  /* border: 1px solid #f0aa30; */
   border-radius: 10px;
   padding: 10px 10px;
   margin: 0 auto;
@@ -62,7 +59,7 @@
 }
 
 #landing-cards-container {
-  margin-top: 10px;
+  margin-top: 40px;
   text-align: center;
   align-items: center;
 }
@@ -139,6 +136,7 @@
 
 .map-card-container {
   display: flex;
+  margin-top: 32px;
 }
 
 #index-cards-container {

@@ -13,9 +13,9 @@
       <div class="card" id="bathroom-show-card">
         <p> <b> Description: </b><%= @bathroom.description %> </p>
         <p> <b> Price: </b><%= @bathroom.price %> </p>
-        <p> <b> Host </b><%= "#{@user.first_name} #{@user.last_name}" %> </p>
-        <p> <b> Phone number </b><%= @user.phone_number %> </p>
-        <p> <b> Email </b><%= @user.email %> </p>
+        <p> <b> Host: </b><%= "#{@user.first_name} #{@user.last_name}" %> </p>
+        <p> <b> Phone number: </b><%= @user.phone_number %> </p>
+        <p> <b> Email: </b><%= @user.email %> </p>
         <div id="buttons">
           <%# ---------Delete the bathroom %>
           <% if current_user == @bathroom.user %>
@@ -31,8 +31,8 @@
               %>
           <% end  %>
           <%# If this is the users bathroom %>
+          <%= link_to 'Back to all', bathrooms_path, class: 'button' %>
           <%= link_to 'Book this bathroom!', new_bathroom_booking_path(@bathroom), class: 'button' %>
-          <%= link_to 'Back to bathrooms', bathrooms_path, class: 'button' %>
         </div>
       </div>
     </div>
