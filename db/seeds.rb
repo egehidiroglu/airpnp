@@ -12,7 +12,7 @@ users = %w[https://assets.teenvogue.com/photos/62485a6e6f883de6edfb2e9b/1:1/w_29
   https://upload.wikimedia.org/wikipedia/en/thumb/d/de/Barney_Gumble.png/220px-Barney_Gumble.png
   https://upload.wikimedia.org/wikipedia/en/3/33/Elaine-benes-3707.jpg
   https://www.biography.com/.image/t_share/MTgxMDEyMDQ4NzE5NjUxOTI4/gettyimages-471835002.jpg
-  https://static.wikia.nocookie.net/p__/images/1/17/Jeff_daniels.jpg/revision/latest?cb=20130118205053&path-prefix=protagonist
+  https://assets.mycast.io/actor_images/actor-harry-dunne-279020_small.jpg?1633201684
   https://cdn.vox-cdn.com/thumbor/nyfeTpnaEB6BFBhFlG1k7dvWBFE=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/20077872/star_jeffree.jpg
   https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTY3MDUxMjkzMjI1OTIwMTcz/brad-pitt-attends-the-premiere-of-20th-century-foxs--square.jpg
   https://upload.wikimedia.org/wikipedia/en/thumb/d/dc/MichaelScott.png/220px-MichaelScott.png
@@ -64,7 +64,7 @@ address = ["5589 Rue Clark, Montreal",
   "1108 Rue Gilford, Montreal",
   "800 Duluth Ave E, Montreal",
   "4405 Rue Marquette, Montreal",
-  "5371 Rue Clark, Montreal",
+  "138 Atwater Ave, Montreal",
   "5417 Rue Saint-Urbain, Montreal",
 ]
 
