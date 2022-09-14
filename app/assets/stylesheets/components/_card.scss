@@ -118,9 +118,14 @@ a:hover {
 @media (min-width: 1200px) {
   .cards {
     grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 16px;
   }
 }
 
 .card {
   margin: 0, auto;
+}
+
+.card p {
+  margin-left: 24px;
 }

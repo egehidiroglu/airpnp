@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon <%= "bg-white" if current_page?(root_path) %>" >
   <div class="container-fluid">
     <%= link_to root_path, class: "navbar-brand" do %>
-      <%= image_tag "https://static.thenounproject.com/png/352851-200.png" %>
+      <%= image_tag "toilet.png" %>
     <% end %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -16,7 +16,7 @@
             <% else %>
               <%= image_tag 'toilet-paper.jpg', class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false%>
             <% end %>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <div class="dropdown-menu dropdown-menu-end dropdown-menu-right" aria-labelledby="navbarDropdown">
               <%= link_to "My bathrooms", my_bathrooms_path, class: "dropdown-item" %>
               <%= link_to "My bookings", bookings_path, class: "dropdown-item" %>
               <%= link_to "My host bookings", host_bookings_path, class: "dropdown-item" %>
